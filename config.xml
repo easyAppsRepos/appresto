@@ -57,12 +57,12 @@
 
 
     <preference name="android-build-tool" value="gradle" />
-
+<!--
 <plugin name="phonegap-plugin-push" version="1.5.3" source="npm">
     <param name="SENDER_ID" value="22934730845" />
 </plugin>
 
-<!--   <feature name="StatusBar">
+   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature> 
 
@@ -83,11 +83,11 @@
   <preference name="StatusBarStyle" value="lightcontent" />
 
   <preference name="android-build-tool" value="gradle" /> -->
-
+<!-- 
   <gap:plugin name="cordova-plugin-camera"  source="npm"  spec="2.4.1" />
   <gap:plugin name="cordova-plugin-file-transfer"  source="npm" spec="1.6.3" />
 
-<!-- <gap:plugin name="phonegap-plugin-barcodescanner"  source="npm" /> -->
+<gap:plugin name="phonegap-plugin-barcodescanner"  source="npm" /> -->
 <gap:plugin name="cordova-plugin-statusbar"  source="npm" />
 <gap:plugin name="cordova-plugin-whitelist" version="1.3.1" source="npm" />
 <gap:plugin name="cordova-plugin-network-information" source="npm" version="1.0.1" />
@@ -99,7 +99,7 @@
 
   <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="App would like to access the library." />
 </plugin> 
- -->
+
 
 
 
@@ -107,7 +107,7 @@
             <param name="APP_ID" value="557322497945858" />
             <param name="APP_NAME" value="UltraDoujinshi" />
 </plugin>
-
+ -->
 
 
 
