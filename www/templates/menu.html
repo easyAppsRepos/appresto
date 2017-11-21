@@ -1,0 +1,144 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+
+      <div style='   
+       background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(img/r1.jpg);
+    position: absolute;
+    width: 100%;
+    height: 145px;
+    background-size: cover;
+    z-index: 4;    background-position-y: -20px;'>
+      
+
+    </div>
+
+
+    <ion-nav-bar class="bar-clear">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button style="    background-color: white;
+    color: #444;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;" class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+
+    <!-- TABS -->
+    <ion-tabs  >
+
+
+<div style="    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 33px;
+
+    background: rgb(190, 7, 20);    z-index: 23;
+"></div>
+      <ion-tab   style='    z-index: 33;' icon-off="feetballOff" icon-on="feetball" href="#/app/search">
+        <ion-nav-view name="tab-search"></ion-nav-view>
+      </ion-tab>
+
+      <ion-tab  icon-off="tab2Off" icon-on="tab2" href="#/app/browse">
+        <ion-nav-view name="tab-browse"></ion-nav-view>
+      </ion-tab>
+
+      <ion-tab icon-off="tab3Off" icon-on="tab3" href="#/app/playlists">
+        <ion-nav-view name="tab-playlists"></ion-nav-view>
+      </ion-tab>
+
+    </ion-tabs>
+
+  </ion-side-menu-content>
+
+   <!-- Side Menu (left) -->
+  <ion-side-menu side="left">
+ 
+    <ion-content style='background-color: #000'>
+<div style="height:70px">
+            <button style="background-color: white;
+    color: #444;
+    border-radius: 100%;
+    height: 50px;
+    width: 47px;
+    font-size: 40px;
+    float: left;
+    margin-left: 25px;
+    margin-top: 13px;" class="button button-icon button-clear ion-ios-arrow-thin-left" menu-toggle="left">
+        </button>
+
+</div> 
+      <ion-list>
+<!--         <ion-item menu-close ng-click="login()">
+          Login
+        </ion-item> -->
+
+
+
+        <ion-item style=' 
+    text-align: center;    border: none !important;
+    color: white;' menu-close href="#/app/search">
+        <img style='border: solid 2px white;
+    border-radius: 100%;
+    height: 60px;' src="img/serv.png"><br>
+          Mesa
+        </ion-item>
+
+
+        <ion-item style=' 
+    text-align: center;    border: none !important;
+    color: white;' menu-close href="#/app/search">
+        <img style='border: solid 2px white;
+    border-radius: 100%;
+    height: 60px;' src="img/user.png"><br>
+          Mi Perfil
+        </ion-item>
+
+
+        <ion-item style=' 
+    text-align: center;    border: none !important;
+    color: white;' menu-close href="#/app/search">
+        <img style='border: solid 2px white;
+    border-radius: 100%;
+    height: 60px;' src="img/tab1.png"><br>
+          Restaurantes
+        </ion-item>
+
+
+        <ion-item href="#/favoritos" style=' 
+    text-align: center;    border: none !important;
+    color: white;' menu-close>
+        <img style='border: solid 2px white;
+    border-radius: 100%;
+    height: 60px;' src="img/estre.png
+"><br>
+          Lugares Favoritos
+        </ion-item>
+
+             <ion-item style=' 
+    text-align: center;    border: none !important;
+    color: white;' menu-close href="#/app/search">
+        <img style='
+    height: 60px;' src="img/des.png
+
+"><br>
+          Mis descuentos
+        </ion-item>
+
+
+
+
+
+<!--         <ion-item menu-close href="#/app/browse">
+          Browse
+        </ion-item>
+        <ion-item menu-close href="#/app/playlists">
+          Playlists
+        </ion-item> -->
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

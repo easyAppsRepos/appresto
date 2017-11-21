@@ -1,0 +1,243 @@
+
+
+    <ion-view title='Restaurantes' >
+
+
+    <ion-nav-bar class="bar-energized">
+
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button ng-click='toggleSideMenu()'  style="    background-color: white;
+    color: #444;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;" class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+
+
+
+
+      </ion-nav-buttons>
+
+
+            <ion-nav-buttons side="right">
+        <button   style=" 
+    color: white;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;" class="button button-icon button-clear ion-ios-settings-strong" >
+        </button>
+
+
+
+        
+      </ion-nav-buttons>
+
+
+    </ion-nav-bar>
+
+        <ion-content style="top: 53px; background: #efefef; " >
+
+
+<div class="bar bar-header item-input-inset">
+  <label class="item-input-wrapper">
+    <i class="icon ion-ios-search placeholder-icon"></i>
+    <input type="search" placeholder="buscar">
+  </label>
+  <button class="button button-clear">
+    Buscar
+  </button>
+</div>
+
+
+<div style="    text-align: center;
+   background-color:white;
+    width: 100%;
+    height: 50px;">
+
+                    <div style=" z-index:22;  padding-top: 10px; background-color: rgb(190, 7, 20);position: absolute; left: 0;
+    display: inline-block; width:49%;text-align: center
+    ">
+<span style="color:white">Tipo</span><br>
+                    <select  style="  width:100%;color:white !important;  display: inline-block;"  >{{l.nombre}}</option>
+                      <option  selected value='69'  >Todos</option>
+                                      <option  value='5'  >Tipo A</option>
+                      <option value='10' >Tipo B</option>
+                      <option value='15'>Tipo C</option>
+                    </select>
+                </div>
+
+
+
+
+                    <div style="  z-index:22;    padding-top: 10px; background-color: rgb(190, 7, 20);position: absolute; left: 50%;
+                  display: inline-block;
+    width:50%;text-align:center">
+
+<span style="color:white">Ciudad</span><br>
+
+                    <select  style="  color:white !important;  display: inline-block;width:100%" >
+                    <option  selected >Todas</option>
+                      <option  value='5'  >Ciudad A</option>
+                      <option value='10' >Ciudad B</option>
+                      <option value='15'>Ciudad C</option>
+                    </select>
+                </div>
+
+
+
+
+
+
+
+
+</div>
+
+      <ion-scroll direction="y" class="theroot">
+
+    
+<div class="list" style="z-index:20">
+
+   <a style='margin-top:20px;
+          border: none !important;
+    text-align: center;
+    background-color: #fafafa;
+    padding-top: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+        padding-left: 69px !important; ' class="item item-thumbnail-left" href="#">
+      <img style='      border: solid 2px lightgray; border-radius: 100%;' src="img/logo3.jpg">
+
+      <i style="    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    font-size: 30px;
+    height: 35px;
+    width: 35px;
+    color: #BE0714;" class="ion-ios-location"></i>
+
+
+
+     <i style="    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    font-size: 30px;
+    height: 35px;
+    width: 35px;
+    top:90px;
+    color: #BE0714;" class="ion-android-favorite-outline"></i>
+
+
+      <h2 style="text-align:center">
+
+      <div style="    font-size: 22px;
+    color: #444;">La Casona</div>
+  
+    <div style="    font-size: 20px;
+    color: #444;">Argentina</div>
+
+    </h2>
+      <button class="button button-outline mmbbs ">
+  Ver la Carta
+</button>
+    </a>
+ <a style='margin-top:20px;
+          border: none !important;
+    text-align: center;
+    background-color: #fafafa;
+    padding-top: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+        padding-left: 69px !important; ' class="item item-thumbnail-left" href="#">
+      <img style='      border: solid 2px lightgray; border-radius: 100%;' src="img/logo3.jpg">
+
+      <i style="    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    font-size: 30px;
+    height: 35px;
+    width: 35px;
+    color: #BE0714;" class="ion-ios-location"></i>
+
+
+
+     <i style="    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    font-size: 30px;
+    height: 35px;
+    width: 35px;
+    top:90px;
+    color: #BE0714;" class="ion-android-favorite"></i>
+
+
+      <h2 style="text-align:center">
+
+      <div style="    font-size: 22px;
+    color: #444;">La Casona</div>
+  
+    <div style="    font-size: 20px;
+    color: #444;">Argentina</div>
+
+    </h2>
+      <button class="button button-outline mmbbs ">
+  Ver la Carta
+</button>
+    </a>
+
+ <a style='margin-top:20px;
+          border: none !important;
+    text-align: center;
+    background-color: #fafafa;
+    padding-top: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+        padding-left: 69px !important; ' class="item item-thumbnail-left" href="#">
+      <img style='      border: solid 2px lightgray; border-radius: 100%;' src="img/logo3.jpg">
+
+      <i style="    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    font-size: 30px;
+    height: 35px;
+    width: 35px;
+    color: #BE0714;" class="ion-ios-location"></i>
+
+
+
+     <i style="    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    font-size: 30px;
+    height: 35px;
+    width: 35px;
+    top:90px;
+    color: #BE0714;" class="ion-android-favorite-outline"></i>
+
+
+      <h2 style="text-align:center">
+
+      <div style="    font-size: 22px;
+    color: #444;">La Casona</div>
+  
+    <div style="    font-size: 20px;
+    color: #444;">Argentina</div>
+
+    </h2>
+      <button class="button button-outline mmbbs ">
+  Ver la Carta
+</button>
+    </a>
+
+
+</div>
+
+  </ion-scroll>
+      <!--       <a style='    color: #888 !important;' href="geo:38.897096,-77.036545" >Ejemplo de Ubicacion, click</a>  
+ -->
+
+        </ion-content>
+
+    </ion-view >
