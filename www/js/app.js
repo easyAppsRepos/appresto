@@ -24,7 +24,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
   $ionicConfigProvider.tabs.position('top');
 
-
+$ionicConfigProvider.backButton.text('');
   $stateProvider
 
   .state('app', {
@@ -51,6 +51,26 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
+
+
+
+  .state('app.valorar', {
+    url: "/valorar",
+    views: {
+      'tab-browse': {
+        templateUrl: "templates/valorar.html"
+      }
+    }
+  })
+  .state('app.espera', {
+    url: "/espera",
+    views: {
+      'tab-browse': {
+        templateUrl: "templates/espera.html"
+      }
+    }
+  })
+
 
   .state('app.playlists', {
     url: "/playlists",

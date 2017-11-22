@@ -121,4 +121,17 @@
     height: 110px;
     margin-top: 20px;
     border:solid 2px lightgray;
+}
+
+
+
+
+.ionic_ratings .icon {
+  font-size:40px;
+}
+
+.ionic_ratings .read_only {
+  pointer-events:none;
+}
+
 

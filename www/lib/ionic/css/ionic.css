@@ -4200,8 +4200,8 @@ ion-tabs.tabs-color-active-dark .tab-item {
 /* Navigational tab */
 /* Active state for tab */
 .tab-item.tab-item-active, .tab-item.active, .tab-item.activated {
-  opacity: 1;
-    z-index: 33;}
+  opacity: 1 !important;
+    z-index: 33 !important;}
   .tab-item.tab-item-active.tab-item-light, .tab-item.active.tab-item-light, .tab-item.activated.tab-item-light {
     color: #fff; }
   .tab-item.tab-item-active.tab-item-stable, .tab-item.active.tab-item-stable, .tab-item.activated.tab-item-stable {
@@ -4522,7 +4522,8 @@ ion-tabs.tabs-color-active-dark .tab-item {
     max-width: 100%;
     max-height: 90%;
     border-radius: 0px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #333;
+    color:white !important;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -4540,12 +4541,13 @@ ion-tabs.tabs-color-active-dark .tab-item {
 
 .popup-head {
   padding: 15px 10px;
-  border-bottom: 1px solid #eee;
+
   text-align: center; }
 
 .popup-title {
   margin: 0;
   padding: 0;
+  color: white !important;
   font-size: 15px; }
 
 .popup-sub-title {
@@ -6645,8 +6647,8 @@ progress {
         box-shadow: none;
         color: #fff; }
   .button.button-positive {
-    border-color: #0c63ee;
-    background-color: #387ef5;
+    border-color: white;
+    background-color: rgb(190, 7, 20);
     color: #fff; }
     .button.button-positive:hover {
       color: #fff;
