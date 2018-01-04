@@ -291,6 +291,38 @@ $ionicSideMenuDelegate.canDragContent(false);
 
 })
 
+
+.controller('perfilCtrl', [
+    '$scope',
+    '$q',
+    '$stateParams',
+    '$window',
+    '$ionicPopup',
+    '$ionicModal',
+    '$ionicLoading',
+    '$state',
+    'api',
+    function ($scope, $q, $stateParams, $window, $ionicPopup, $ionicModal, $ionicLoading,$state, api) {
+  
+
+/*        api.getUsuar().then(function(data) {
+
+       // $ionicLoading.hide();
+        console.log(data.data.categorias);
+        $scope.categorias = data.data.categorias || [];
+
+      });
+
+
+*/
+
+
+
+  }
+  ])
+
+
+
 .controller('inicioCtrl', [
     '$scope',
     '$q',
@@ -567,7 +599,7 @@ if(tipo==1){
           api.loginUser(user).then(function (events) {
             if(events.data.data){
               console.log(events.data)
-              //window.localStorage.setItem( 'userInfoLC', events.data.idUsuario);            
+              window.localStorage.setItem( 'userInfoLC', events.data.data);            
                 $state.go('demo');
 
                 console.log('logueado');

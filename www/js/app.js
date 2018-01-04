@@ -49,7 +49,7 @@ $ionicConfigProvider.backButton.text('');
         else{
          // $urlRouterProvider.otherwise('login');
            // console.log(localStorage.getItem('userInfoTS'));
-      $urlRouterProvider.otherwise('app.search');
+      $urlRouterProvider.otherwise('app/search');
         // $urlRouterProvider.otherwise("/login");
         }
 
@@ -174,7 +174,7 @@ $ionicConfigProvider.backButton.text('');
     .state('perfil', {
       url: '/perfil',
       templateUrl: 'templates/perfil.html',
-      controller: 'PlaylistsCtrl'
+      controller: 'perfilCtrl'
   })
 
 
