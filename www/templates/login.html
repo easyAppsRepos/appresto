@@ -1,11 +1,26 @@
-<ion-modal-view>
+<ion-modal-view ng-controller='carritoCtrl'>
   <ion-header-bar>
-    <h1 class="title">Login</h1>
+
     <div class="buttons">
-      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+      <button style='height: 50px;
+    width: 50px;
+    font-size: 31px;
+    background: transparent !important;
+    border: none !important;
+    margin-top: -5px;
+    margin-left: -5px;' class="button  ion-close-circled" ng-click="closeLogin()"></button>
     </div>
+
+
+    <h1 class="title"><img style='    height: 41px;
+    vertical-align: -10px;' src="img/carro.png"> Orden</h1>
+  
   </ion-header-bar>
-  <ion-content>
+  <ion-content style='    top: 52px;'>
+
+<!--   <a ng-click='cModal()' class="button button-icon icon ion-close-circled activated"></a>
+
+
     <form ng-submit="doLogin()">
       <div class="list">
         <label class="item item-input">
@@ -21,5 +36,128 @@
         </label>
       </div>
     </form>
-  </ion-content>
+
+     -->
+
+<div  ng-repeat='p in productosCarro' style="
+    
+margin-top: 18px
+">
+      <img ng-click='removeProducto(p.item)' src="img/food/menos.png" style="
+    display: inline-block;
+    float: left;
+    height: 35px;
+    margin-left:  10px;
+
+">
+      <div style="
+    display: inline-block;
+    font-size: 23px;
+        padding-left: 7px;
+">{{p.cantidad}}</div>
+      <div style="
+    display: inline-block;
+    vertical-align: sub;
+        padding-left: 7px;
+    width: 45%;
+    font-size: 16px;
+    height: 100%;
+
+">
+        <div style="    color: #333;"><b>{{p.producto.nombre}}</b></div>
+        <div style="    color: gray;">{{p.producto.adicional}}</div>
+      </div>
+      <div style="
+    display: inline-block;
+    font-size: 23px;
+">${{p.producto.precio * p.cantidad}}</div>
+      <img ng-click='addProducto(p.item)' src="img/food/mas.png" style="
+    display: inline-block;
+    float: right;
+    height: 35px;
+    margin-right: 10px;
+
+">
+
+<button class="button button-block button-positive">
+ Agregar nota
+</button>
+ 
+     </div>
+
+
+
+
+
+
+
+
+<!-- 
+<div style="
+    
+margin-top: 18px
+">
+      <img src="img/food/menos.png" style="
+    display: inline-block;
+    float: left;
+    height: 35px;
+    margin-left:  10px;
+
+">
+      <div style="
+    display: inline-block;
+    font-size: 23px;
+        padding-left: 7px;
+">1</div>
+      <div style="
+    display: inline-block;
+    vertical-align: sub;
+        padding-left: 7px;
+    width: 45%;
+    font-size: 16px;
+    height: 100%;
+
+">
+        <div style="    color: #333;"><b>Plato del dia 3</b></div>
+        <div style="    color: gray;">Fanta-Flan de coco</div>
+      </div>
+      <div style="
+    display: inline-block;
+    font-size: 23px;
+">$21</div>
+      <img src="img/food/mas.png" style="
+    display: inline-block;
+    float: right;
+    height: 35px;
+    margin-right: 10px;
+
+">
+
+<button class="button button-block button-positive">
+ Agregar nota
+</button>
+ 
+     </div> -->
+
+
+
+</ion-content>
+
+  <div style="position: absolute;
+    text-align: center;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background-color: rgb(190, 7, 20);">
+    
+    <div style="    margin-top: 10px;
+    color: white;
+    font-size: 20px;">Su pedido es de $ {{totalCompra}}</div>
+
+        <button ng-click='showAlert()'  style='    margin-top: 10px;
+    margin-bottom: 10px;' class="button button-outline mmbb">
+Enviar Pedido</button>
+
+  </div>
+
 </ion-modal-view>

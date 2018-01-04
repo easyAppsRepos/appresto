@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module('starter', ['ionic', 'angular-carousel', 'starter.controllers', 'starter.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -20,11 +20,44 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider,  $httpProvider) {
+
+
+   $httpProvider.defaults.headers.common = {};
+  $httpProvider.defaults.headers.post = {};
+  $httpProvider.defaults.headers.put = {};
+  $httpProvider.defaults.headers.patch = {};
+  
+
 
   $ionicConfigProvider.tabs.position('top');
 
 $ionicConfigProvider.backButton.text('');
+
+
+
+          if(localStorage.getItem('userInfoLC') == null || 
+            localStorage.getItem('userInfoLC') == 'null' || 
+            localStorage.getItem('userInfoLC') == 'undefined' || 
+            localStorage.getItem('userInfoLC') == undefined){
+
+        //console.log(localStorage.getItem('userInfoTS'));
+      //$urlRouterProvider.otherwise('login');
+      //$urlRouterProvider.otherwise('listaMascotas');
+      $urlRouterProvider.otherwise('inicio');
+        }
+        else{
+         // $urlRouterProvider.otherwise('login');
+           // console.log(localStorage.getItem('userInfoTS'));
+      $urlRouterProvider.otherwise('app.search');
+        // $urlRouterProvider.otherwise("/login");
+        }
+
+
+
+
+
+
   $stateProvider
 
   .state('app', {
@@ -38,9 +71,26 @@ $ionicConfigProvider.backButton.text('');
     url: "/search",
     views: {
       'tab-search': {
-        templateUrl: "templates/search.html"
+        templateUrl: "templates/search.html",
+        controller: "cartaCtrl"
       }
     }
+  })
+
+    .state('inicio', {
+      url: '/inicio',
+      templateUrl: 'templates/inicio.html',
+      controller: 'inicioCtrl'
+  })
+    .state('principal', {
+      url: '/principal',
+      templateUrl: 'templates/principal.html',
+      controller: 'principalCtrl'
+  })
+    .state('demo', {
+      url: '/demo',
+      templateUrl: 'templates/demo.html',
+      controller: 'demoCtrl'
   })
 
   .state('app.browse', {
@@ -70,6 +120,32 @@ $ionicConfigProvider.backButton.text('');
       }
     }
   })
+
+
+    .state('app.platoDia', {
+    url: "/platoDia/:idCategoria",
+    views: {
+      'tab-search': {
+        templateUrl: "templates/platoDia.html",
+        controller: 'platoDiaCtrl'
+      }
+    }
+  })
+
+
+
+
+
+        .state('app.cartaSeccion', {
+    url: "/cartaSeccion/:idCategoria",
+    views: {
+      'tab-search': {
+        templateUrl: "templates/cartaSeccion.html",
+        controller: 'cartaSeccionCtrl'
+      }
+    }
+  })
+
 
 
   .state('app.playlists', {
@@ -102,6 +178,9 @@ $ionicConfigProvider.backButton.text('');
   })
 
 
+  
+
+
     .state('app.single', {
       url: "/playlists/:playlistId",
       views: {
@@ -112,5 +191,5 @@ $ionicConfigProvider.backButton.text('');
       }
     });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/search');
+ 
 });

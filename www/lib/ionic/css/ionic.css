@@ -5461,7 +5461,7 @@ a.item-content {
     display: inline-block;
     margin: 0px 3px;
     width: 15px;
-    color: #000;
+    color: white;
     text-decoration: none;
     opacity: 0.3; }
     .slider-pager .slider-pager-page.active {
@@ -6756,7 +6756,7 @@ progress {
         color: #fff; }
   .button.button-energized {
     border-color: #e6b400;
-    background-color: #ffc900;
+    background-color: #fb9b06;
     color: #fff; }
     .button.button-energized:hover {
       color: #fff;

@@ -1,0 +1,126 @@
+
+
+ <ion-view view-title="" >
+<!-- <img src="img/port2.jpeg"> -->
+
+        <ion-nav-buttons side="left">
+          <button class="button button-positive button-clear no-animation"
+                  ng-click="startApp()" ng-show="!slideIndex">
+            Saltar
+          </button>
+          <button class="button button-positive button-clear no-animation"
+                  ng-click="previous()" ng-show="slideIndex > 0">
+           Anterior
+          </button>
+        </ion-nav-buttons>
+        <ion-nav-buttons side="right"> 
+          <button class="button button-positive button-clear no-animation"
+                  ng-click="next()" ng-show="slideIndex != 2">
+            Siguiente
+          </button>
+          <button class="button button-positive button-clear no-animation"
+                  ng-click="startApp()" ng-show="slideIndex == 2">
+            Empezar a usar
+          </button>
+        </ion-nav-buttons>
+        <ion-slide-box on-slide-changed="slideChanged(index)">
+          <ion-slide style='       
+      color: white;
+ background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1.5) ), url(img/port1.jpg);
+    background-size: cover;
+    background-position-x: -186px;'>
+
+        
+
+          <div style="    margin: 45px;
+    height: 70%;
+    bottom: 0;
+    position: absolute;">
+            <h2 style="color:white"> Bienvenido</h2>
+
+                 <p style="    font-size: 21px;
+    margin-top: 44px;
+    line-height: 1.4;">
+             Te recomendaremos platos y te mostraremos la carta de los Restaurantes
+            </p>
+
+
+
+            <div id="logo">
+              <img  style='    width: 135px;
+    bottom: 0px;
+    position: absolute;
+    margin-bottom: 25px;
+    margin-left: -67px;' style='    width: 150px;' src="img/icono1.png">
+            </div>
+
+            </div>
+       
+          </ion-slide>
+          <ion-slide style='       
+      color: white;
+ background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1.5) ), url(img/port1.jpg);
+    background-size: cover;
+    background-position-x: -186px;'>
+
+  
+           <h3 style="color: white;">Facil de usar</h3>
+            
+            <div id="list">
+              <h4 style="color: white;">Solo en 3 pasos</h5>
+              <ol>
+                <li style="    text-align: center;">Selecciona tus alimentos</li>
+                <li style="    text-align: center;">Llama al mozo</li>
+                <li style="    text-align: center;">Pide la cuenta</li>
+              </ol>
+            </div>
+
+
+           
+              <img  style='    width: 135px;
+    bottom: 0px;
+    position: absolute;
+    margin-bottom: 70px;
+    margin-left: -67px;' style='    width: 150px;' src="img/icono1.png">
+            
+
+           
+
+
+ 
+          </ion-slide>
+        <ion-slide style='       
+      color: white;
+ background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1.5) ), url(img/port1.jpg);
+    background-size: cover;
+    background-position-x: -186px;'>
+
+  
+           <h3 style="color: white;">Facil de usar</h3>
+            
+            <div id="list">
+              <h4 style="color: white;">Solo en 3 pasos</h5>
+              <ol>
+                <li style="    text-align: center;">Selecciona tus alimentos</li>
+                <li style="    text-align: center;">Llama al mozo</li>
+                <li style="    text-align: center;">Pide la cuenta</li>
+              </ol>
+            </div>
+
+
+           
+              <img  style='    width: 135px;
+    bottom: 0px;
+    position: absolute;
+    margin-bottom: 70px;
+    margin-left: -67px;' style='    width: 150px;' src="img/icono1.png">
+            
+
+           
+
+
+ 
+          </ion-slide>
+        </ion-slide-box>
+      </ion-view>
+

@@ -1,72 +1,16 @@
 <ion-view view-title="">
   <ion-content style='    background: lightgray;'>
     <ion-list>
-      <ion-item style='padding: 0px !important'>
-      <div style="    padding: 0px;
+      <ion-item ng-repeat='c in categorias' ng-click='mover(c.tipo,c.idCategoria)' style='padding: 0px !important'>
+      <div ng-style="{'background':'linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('+c.foto+')'}" style="    padding: 0px;
     width: 100%;
     height: 170px;
 
-     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(img/food/breadfood.jpg);
+     
     background-size: cover;"><span style="    display: block;
     text-align: center;
     padding-top: 70px;
-    color: white;">PLATO DEL DIA</span></div>
-      
-      </ion-item>
-
-
-            <ion-item style='padding: 0px !important'>
-      <div style="    padding: 0px;
-    width: 100%;
-    height: 170px;
-
-     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(img/food/babe.jpg);
-    background-size: cover;"><span style="    display: block;
-    text-align: center;
-    padding-top: 70px;
-    color: white;">A LA PARRILLA</span></div>
-      
-      </ion-item>
-
-
-            <ion-item style='padding: 0px !important'>
-      <div style="    padding: 0px;
-    width: 100%;
-    height: 170px;
-
-     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(img/food/pizza.jpg);
-    background-size: cover;"><span style="    display: block;
-    text-align: center;
-    padding-top: 70px;
-    color: white;">PIZZAS</span></div>
-      
-      </ion-item>
-
-
-            <ion-item style='padding: 0px !important'>
-      <div style="    padding: 0px;
-    width: 100%;
-    height: 170px;
-
-     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(img/food/d3.jpg);
-    background-size: cover;"><span style="    display: block;
-    text-align: center;
-    padding-top:70px;
-    color: white;">POSTRES</span></div>
-      
-      </ion-item>
-
-            <ion-item style='padding: 0px !important'>
-      <div style="    padding: 0px;
-    width: 100%;
-    height: 170px;
-
-     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(img/food/ensalada.jpg);
-    background-size: cover;"><span style="    display: block;
-    text-align: center;
-    padding-top: 70px;
-    color: white;">ENSALADAS</span></div>
-      
+    color: white;">{{c.nombreCategoria}}</span></div>  
       </ion-item>
 
     </ion-list>

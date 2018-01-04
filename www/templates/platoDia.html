@@ -1,0 +1,206 @@
+
+<style type="text/css">
+   .slider-pager {
+    display: none !important
+   }
+</style>
+    <ion-view  title=''>
+
+
+
+
+        <ion-content style="top: 167px; background-color: gray;"  >
+
+        <div style="text-align: center;
+    background-color: #222;"> 
+
+    <i ng-click='goIzq()' style='    font-size: 30px;
+    vertical-align: middle;
+    margin-right: 5px;
+    color: white;' class="ion-arrow-left-c">
+      
+    </i> 
+
+    <span ng-repeat='t in productos' ng-class="{itemSe: active == $index}" ng-click='gotoSlide($index)' class="itemDe">{{$index+1}}</span> 
+
+
+    <i style='    font-size: 30px;
+    vertical-align: middle;
+    margin-left: 10px;
+    color: white;' class="ion-arrow-right-c" ng-click='next()'></i>
+
+
+    </div>
+
+         <ion-slide-box on-slide-changed="slideChanged(index)" style='    height: 347px;' on-slide-changed="slideChanged(index)">
+          
+
+          <ion-slide  ng-repeat='p in productos' class="solicitacoes platoDia">
+    
+            <div style="     height: 100%;
+    width: 100%;
+    background-image: url(img/food/dfdsfsd.jpg);
+    background-size: cover;">
+
+            <div style="background: rgba(47, 47, 47, 0.64);
+    height: 132px;">
+        
+        <h4 style="display: inline-block;
+    width: 100%;
+    text-align: left;
+    margin-left: 15px;
+    margin-top: 10px;
+    color: white;margin-bottom: 0px;">{{p.nombre}}</h4>
+
+        <p style="     margin-left: 15px;
+    text-align: left;
+    color: white;
+    font-size: 16px;
+    display: block;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 4.6em;
+    line-height: 1.4em;
+    margin-right: 8px;">{{p.descripcion}}</p>
+
+    <div style="color: white;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    top: 106px;
+    right: 11px;">$ {{p.precio}}</div>
+
+    </div>
+
+    <div style="text-align:center; width:100%;margin-top: 60px;">
+        
+       <div ng-show='getProductoCantidad(p.productoId)>0' ng-click='removeProducto(p.productoId)' style="    display: inline-block;
+    float: left;
+    margin-left: 20px;">
+
+      <img src="img/food/menos.png">
+
+    </div>
+
+
+
+       <div style="    font-size: 90px;
+    display: inline-block;
+    font-weight: bold;
+    color: white;">{{getProductoCantidad(p.productoId)}}</div>
+       <div ng-click='agregarProducto(p.productoId, p)' style="    display: inline-block;
+    float: right;
+    margin-right: 20px;"><img src="img/food/mas.png"></div>
+       
+    </div>
+                
+
+                       <div style="background: rgba(47, 47, 47, 0.84);
+    height: 34px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    color: white !important;
+    font-size: 21px;
+    line-height: 1.6;"> <i class="ion-heart" style="position: absolute;
+    left: 20px;"> {{p.likes}}</i>  <p style="text-align: center;">{{p.kcal}} Kcal</p></div>
+
+
+
+            </div>
+          </ion-slide>
+          
+     
+          
+        </ion-slide-box>
+
+<div style="margin-top: 10px;
+    background-color: #222;
+    padding-top: 7px;
+        margin-bottom: 40px;">
+
+<ul style='background-color: white' rn-carousel  class=" sff image">
+  <li>
+    <div class="textoCarru">COCA COLA</div>
+    <img class='fill' src="img/food/cocacola.png">
+  </li>
+
+    <li >
+    <div class="textoCarru">FANTA</div>
+<img class='fill' src="img/food/guarana.png">
+  </li>
+
+    <li >
+    
+    <div class="textoCarru">CERVEZA</div>
+        <img class='fill' src="img/food/havanaClub.jpg">
+  </li>
+
+
+</ul>
+
+
+<ul style='background-color: white' rn-carousel  class=" sff image">
+  <li>
+    <div class="textoCarru">FLAN</div>
+    <img class='fill' src="img/food/flan.jpg">
+  </li>
+
+    <li >
+    <div class="textoCarru">TRES LECHES</div>
+<img class='fill' src="img/food/leches.jpeg">
+  </li>
+
+    <li >
+    
+    <div class="textoCarru">HELADO</div>
+        <img class='fill' src="img/food/helado.jpg">
+  </li>
+
+
+</ul>
+
+
+
+<ul style='background-color: white' rn-carousel  class=" sff image">
+  <li>
+    <div class="textoCarru">ELOTE Y TOMATE</div>
+    <img class='fill' src="img/food/elote.jpg">
+  </li>
+
+    <li >
+    <div class="textoCarru">FRUTAS</div>
+<img class='fill' src="img/food/frutas.jpg">
+  </li>
+
+    <li >
+    
+    <div class="textoCarru">ITALIANA</div>
+        <img class='fill' src="img/food/italiana.jpg">
+  </li>
+
+
+</ul>
+
+
+</div>
+
+
+
+        </ion-content>
+<div style="width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    text-align: center;">
+        <div ng-click='goCarrito()' style="      display: block;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 3px solid #000000b8;
+    background: #f7f7f7;
+    bottom: -50px;
+    margin-left: calc(50% - 50px);"><img style='height: 43px; margin-top: 6px' src="img/carro.png"></div>
+</div>
+    </ion-view >
